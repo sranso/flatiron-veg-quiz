@@ -33,4 +33,5 @@ PLATFORMS
 
 DEPENDENCIES
   shotgun
+  sinatra
   tux

@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-require 'sinatra'
+gem 'sinatra'
 
 group 'development' do
   gem 'shotgun'

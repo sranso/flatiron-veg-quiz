@@ -4,11 +4,11 @@ require 'bundler'
 Bundler.require
 
 class Weird < Sinatra::Application
-  get '/veg' do
+  get '/' do
     erb :index
   end
 
-  post '/weird' do
+  post '/' do
     erb :results
   end
 end

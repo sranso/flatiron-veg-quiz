@@ -1,2 +1,35 @@
-<h2>Good. That was crunchy... or soft. No judgement here.</h2>
+<h2>Good. Here is <%= params["vegname"] %>'s life story:</h2>
+<p><%= params["vegname"] %> has been dating <%= params["relationship"]["sigo"]["signame"] %> for <%= params["relationship"]["sigo"]["sigdatingtime"] %> years.
+  <%= params["relationship"]["sigo"]["monogamous_y"] ? @monogamous_y : @monogamous_n %>
+  <br>
+  <%= params["vegname"] %> was raised by the loving <%= params["family"]["parents"]["0"] %> and <%= params["family"]["parents"]["0"] %>.
+  <br>
+  <%= params["family"]["siblings"]["0"]["name"]["intmdng"] == "y" ? @intmdng_y : @intmdng_n %>
+  <br>
+  To make a living, <%= params["vegname"] %> is <%= params["job"] %>. For exercise, <%= params["vegname"] %> plays <%= params["sport"] %>. For fun, <%= params["vegname"] %> enjoys <%= params["pasttime"] %>.
+  <br>
+  <%= params["vegname"] %>'s biggest hope is <%= params["hope"] %>, and <%= params["vegname"] %>'s biggest fear is <%= params["fear"] %>.
+  <br>
+  Oh, what a life this plant leads!
+</p>
+
 <%= params.inspect %>
+<!-- {
+  "vegname"=>"a",
+  "relationship"=>{
+    "sigo"=>{
+      "signame"=>"d", "sigdatingtime"=>"1", "monogamous_y"=>"y"
+    }
+  },
+  "family"=>{
+    "parents"=>{
+      "0"=>"scott", "1"=>"carol"
+    },
+    "siblings"=>{
+      "0"=>{
+        "name"=>"dd", "intmdng"=>"n"
+      },
+    }
+  },
+  "job"=>"pokemon", "sport"=>"footballeu", "pasttime"=>"noone"
+} -->
